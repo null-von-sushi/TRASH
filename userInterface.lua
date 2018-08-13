@@ -1,6 +1,6 @@
 local resX 
 local resY  
-local isMobile=false
+local isMobile=true
 
 
 --function getNativeResolution
@@ -11,7 +11,7 @@ local isMobile=false
 
 
 function setResolution(x, y)
-    changeResolution(x, y)   
+    love.window.setMode(x, y, {fullscreen=false, resizable=false, centered=true, vsync=true})
     canvas = love.graphics.newCanvas(x, y)
     love.graphics.setCanvas(canvas)
         love.graphics.clear()
@@ -22,8 +22,6 @@ function setResolution(x, y)
 end
 
 function changeResolution(x, y)
-    if isMobile ==
-    love.window.setMode(x, y, {fullscreen=false, resizable=false, centered=true, vsync=true})
 end
 
 setResolution(540, 960)
