@@ -4,8 +4,8 @@ local isMobile=true
 
 
 --function getNativeResolution
---1080 --540
---1920 --960
+--1080 --540 --270
+--1920 --960 --480
 --end
 
 
@@ -21,5 +21,5 @@ function setResolution(x, y)
     love.graphics.setCanvas() 
 end
 
-setResolution(540, 960)
+setResolution(270, 480)
 
