@@ -14,10 +14,10 @@ function initAllWaifus()
     
     
     --DEBUG: Read out root table contents
-    --for i,v in ipairs(waifuArray) do
-    --    print("DEBUG: Object:" ,i, v)
-    --    print("DEBUG: Contents: ", v.id, v.name, v.unlocked)
-    --end
+    for i,v in ipairs(waifuArray) do
+        print("DEBUG: Object:" ,i, v)
+        print("DEBUG: Contents: ", v.id, v.name, v.unlocked)
+    end
     
     return waifuArray 
 end
