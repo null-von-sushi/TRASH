@@ -9,7 +9,7 @@ function love.load()
     waifuArray = waifuArray
     require("getWaifu")
     require("userInterface")
-    x = canvas:getWidth()*.1
+    setResolution(270, 480)
 end
 
 
@@ -17,7 +17,7 @@ end
 --end
 
 function love.draw()
-    love.graphics.setColor(1, 1, 1, 1)
+    --love.graphics.setColor(1, 1, 1, 1)
 end
 
 require("UI.intro")

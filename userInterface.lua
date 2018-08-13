@@ -18,8 +18,19 @@ function setResolution(x, y)
         love.graphics.setBlendMode("alpha")
         love.graphics.setColor(1, 0, 0, 0.5)
         love.graphics.rectangle('fill', 0, 0, 100, 100)
-    love.graphics.setCanvas() 
+    love.graphics.setCanvas()
+    love.graphics.draw(canvas)
 end
 
-setResolution(270, 480)
-
+function bottomBar()
+    love.graphics.setCanvas(canvas)
+    local bottomBarCanvas = love.graphics.newCanvas(canvas:getWidth(), (canvas:getHeight() * .1))
+    love.graphics.setCanvas(bottomBarCanvas)
+        love.graphics.clear()
+        love.graphics.setBlendMode("alpha", "premultiplied")
+        love.graphics.setColor(1, 0, 0, 0.5)
+        love.graphics.rectangle("fill", 0, 0, canvas:getWidth(), canvas:getWidth())
+        love.graphics.setBackgroundColor( 0, 0, 1 )
+   love.graphics.setCanvas(canvas)
+   love.graphics.draw(bottomBarCanvas)
+end
