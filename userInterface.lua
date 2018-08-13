@@ -8,10 +8,17 @@ local isMobile=false
 --1920 --960
 --end
 
-canvas = love.graphics.newCanvas(800, 600)
 
-function setResolution()
-    changeResolution(x, y)    
+
+function setResolution(x, y)
+    changeResolution(x, y)   
+    canvas = love.graphics.newCanvas(x, y)
+    love.graphics.setCanvas(canvas)
+        love.graphics.clear()
+        love.graphics.setBlendMode("alpha")
+        love.graphics.setColor(1, 0, 0, 0.5)
+        love.graphics.rectangle('fill', 0, 0, 100, 100)
+    love.graphics.setCanvas() 
 end
 
 function changeResolution(x, y)
