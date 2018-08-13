@@ -21,5 +21,8 @@ function setResolution(x, y)
     love.graphics.setCanvas() 
 end
 
+function changeResolution(x, y)
+end
+
 setResolution(540, 960)
 
