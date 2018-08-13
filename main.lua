@@ -13,20 +13,14 @@ function love.load()
 end
 
 
-function love.update(dt)
-    --if love.keyboard.isDown("right") then
-    --x = x + 100 * dt
-    --elseif love.keyboard.isDown("left") then
-    --x = x - 100 * dt
-    --end
-end
+--function love.update(dt)
+--end
 
 function love.draw()
     love.graphics.setColor(1, 1, 1, 1)
-    require("UI.intro")
-    love.graphics.draw(canvas)
 end
 
+require("UI.intro")
 
 
 function love.focus(f)
